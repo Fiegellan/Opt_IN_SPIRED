@@ -11,8 +11,13 @@ import UIKit
 class helpViewController: UIViewController {
     @IBAction func hideView(_ sender: Any) {
         self.dismiss(animated: true, completion: {
-            let vc = self.storyboard?.instantiateViewController(withIdentifier: "tableSettings")
-            self.present(vc!, animated: true, completion: nil)
+            //let vc = self.storyboard?.instantiateViewController(withIdentifier: "tableSettings")
+            //self.present(vc!, animated: true, completion: nil)
+            func actioncall () {
+                let loginPageView = self.storyboard?.instantiateViewController(withIdentifier: "tableSettings") as! SecondViewController
+                self.navigationController?.pushViewController(loginPageView, animated: true)
+            }
+            
         })
     }
     override func viewDidLoad() {

@@ -48,6 +48,7 @@ class FourthViewController: UIViewController, UITableViewDataSource, UITableView
         print(theQuote)
         performSegue(withIdentifier: "details", sender: self)
         
+        
     }
 
     

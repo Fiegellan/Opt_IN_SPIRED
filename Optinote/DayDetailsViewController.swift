@@ -12,8 +12,15 @@ class DayDetailsViewController: UIViewController {
     @IBOutlet weak var detailsDisplayText: UITextView!
     @IBAction func backToView(_ sender: Any) {
         self.dismiss(animated: true, completion: {
-            let vc = self.storyboard?.instantiateViewController(withIdentifier: "PersonalHistory")
-            self.present(vc!, animated: true, completion: nil)
+            //let vc = self.storyboard?.instantiateViewController(withIdentifier: "PersonalHistory")
+            //self.present(vc!, animated: true, completion: nil)
+            
+            func actioncall () {
+                let loginPageView = self.storyboard?.instantiateViewController(withIdentifier: "PersonalHistory") as! FourthViewController
+                self.navigationController?.pushViewController(loginPageView, animated: true)
+            }
+            
+
         })
     }
 

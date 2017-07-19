@@ -20,8 +20,13 @@ class UpdateTimeViewController: UIViewController, UNUserNotificationCenterDelega
         registerLocal()
         scheduleLocal()
         self.dismiss(animated: true, completion: {
-            let vc = self.storyboard?.instantiateViewController(withIdentifier: "tableSettings")
-            self.present(vc!, animated: true, completion: nil)
+            //let vc = self.storyboard?.instantiateViewController(withIdentifier: "tableSettings")
+            //self.present(vc!, animated: true, completion: nil)
+            
+            func actioncall () {
+                let loginPageView = self.storyboard?.instantiateViewController(withIdentifier: "tableSettings") as! SecondViewController
+                self.navigationController?.pushViewController(loginPageView, animated: true)
+            }
         })
     }
     
@@ -45,11 +50,21 @@ class UpdateTimeViewController: UIViewController, UNUserNotificationCenterDelega
         print("sending the time to global variables- the hours is: \(hour) and the minute is : \(minute)")
         
         updateIntoTime()
+        registerLocal()
+        scheduleLocal()
+        
         
         self.dismiss(animated: true, completion: {
-            let vc = self.storyboard?.instantiateViewController(withIdentifier: "tableSettings")
-            self.present(vc!, animated: true, completion: nil)
+            //let vc = self.storyboard?.instantiateViewController(withIdentifier: "tableSettings")
+            //self.present(vc!, animated: true, completion: nil)
+            
+            func actioncall () {
+                let loginPageView = self.storyboard?.instantiateViewController(withIdentifier: "tableSettings") as! SecondViewController
+                self.navigationController?.pushViewController(loginPageView, animated: true)
+            }
         })
+
+        
     }
     
 

@@ -20,15 +20,25 @@ class ThirdViewController: UIViewController, UITextViewDelegate   {
     @IBAction func backToEnter(_ sender: Any) {
         self.dismiss(animated: true, completion: {
             
-            let vc = self.storyboard?.instantiateViewController(withIdentifier: "composeThoughts")
-            self.present(vc!, animated: true, completion: nil)
-            sadThoughtString = ""
+            //let vc = self.storyboard?.instantiateViewController(withIdentifier: "composeThoughts")
+            //self.present(vc!, animated: true, completion: nil)
+
+            
+            func actioncall () {
+                let loginPageView = self.storyboard?.instantiateViewController(withIdentifier: "composeThoughts") as! ThirdViewController
+                self.navigationController?.pushViewController(loginPageView, animated: true)
+            }
         })
     }
   
 
     @IBOutlet weak var sadThoughts: UITextView!
     @IBOutlet weak var happyThoughts: UITextView!
+    
+    //textView.autocorrectionType = UITextAutocorrectionType.yes
+    //textView.spellCheckingType = UITextSpellCheckingType.yes
+    
+    
     
     
     override func viewDidLoad() {
@@ -64,6 +74,7 @@ class ThirdViewController: UIViewController, UITextViewDelegate   {
     
     @IBAction func next(_ sender: UIButton) {
         //print("in the Button")
+        
         sadThoughtString = sadThoughts.text
         print(sadThoughtString)
         query1 = "INSERT INTO history (Date, Category, Thought) VALUES (DATE('now','localtime'), 'Bad', '\(sadThoughtString)');"
