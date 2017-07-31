@@ -134,9 +134,9 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="adc-go-gFJ">
-                                                    <rect key="frame" x="8" y="0.0" width="101" height="21"/>
+                                                    <rect key="frame" x="8" y="0.0" width="205" height="21"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="101" id="0Zz-wD-BeJ"/>
+                                                        <constraint firstAttribute="width" constant="205" id="0Zz-wD-BeJ"/>
                                                     </constraints>
                                                     <attributedString key="attributedText">
                                                         <fragment content="Date Label">
@@ -208,6 +208,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="History" image="History" id="w2c-Uh-W8r"/>
                     <connections>
+                        <outlet property="historic" destination="ZaW-6K-khx" id="KST-mb-bZc"/>
                         <segue destination="LGY-E4-Ijf" kind="modal" identifier="details" id="3oM-Yf-MVC"/>
                     </connections>
                 </viewController>
@@ -320,7 +321,7 @@
                                 </constraints>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="interactive" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Uoq-IG-Oe7">
-                                <rect key="frame" x="53" y="317" width="307" height="123"/>
+                                <rect key="frame" x="53" y="308" width="307" height="123"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="123" id="hjT-7w-4gM"/>
@@ -354,10 +355,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Uoq-IG-Oe7" firstAttribute="top" secondItem="ln4-bw-sDr" secondAttribute="bottom" constant="18" id="0T2-Pi-Bj2"/>
+                            <constraint firstItem="Uoq-IG-Oe7" firstAttribute="top" secondItem="ln4-bw-sDr" secondAttribute="bottom" constant="9" id="0T2-Pi-Bj2"/>
                             <constraint firstItem="ln4-bw-sDr" firstAttribute="leading" secondItem="4fm-4D-2XV" secondAttribute="leadingMargin" constant="29" id="0YT-2b-eJe"/>
                             <constraint firstItem="4Cl-v7-NLa" firstAttribute="centerX" secondItem="4fm-4D-2XV" secondAttribute="centerX" id="4Oo-Ny-gVM"/>
-                            <constraint firstItem="Uoq-IG-Oe7" firstAttribute="top" secondItem="4Cl-v7-NLa" secondAttribute="bottom" constant="-180" id="7ls-EJ-hfr"/>
+                            <constraint firstItem="Uoq-IG-Oe7" firstAttribute="top" secondItem="4Cl-v7-NLa" secondAttribute="bottom" constant="-189" id="7ls-EJ-hfr"/>
                             <constraint firstItem="4Cl-v7-NLa" firstAttribute="leading" secondItem="ln4-bw-sDr" secondAttribute="trailing" constant="-257" id="9TB-zN-40F"/>
                             <constraint firstItem="Ucg-6a-ebP" firstAttribute="top" secondItem="4fm-4D-2XV" secondAttribute="top" id="BVZ-yY-7o5"/>
                             <constraint firstItem="ngL-Wb-rcC" firstAttribute="top" secondItem="Yh2-Kd-C4N" secondAttribute="bottom" constant="8" id="IIO-0C-bx1"/>

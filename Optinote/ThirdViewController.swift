@@ -41,10 +41,10 @@ class ThirdViewController: UIViewController, UITextViewDelegate   {
     
     
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        //self.sadThoughts.delegate = self
-        //self.happyThoughts.delegate = self
+        
         print("in the third view")
         // Do any additional setup after loading the view, typically from a nib.
         
@@ -76,6 +76,7 @@ class ThirdViewController: UIViewController, UITextViewDelegate   {
         //print("in the Button")
         
         sadThoughtString = sadThoughts.text
+        
         print(sadThoughtString)
         query1 = "INSERT INTO history (Date, Category, Thought) VALUES (DATE('now','localtime'), 'Bad', '\(sadThoughtString)');"
         //insertInto()
